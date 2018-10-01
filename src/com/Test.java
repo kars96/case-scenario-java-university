@@ -1,6 +1,6 @@
 package com;
 
-import universityexceptions.UniversityException;
+import com.universityexceptions.UniversityException;
 
 public class Test {
 

@@ -3,11 +3,11 @@ package com;
 import java.io.Serializable;
 import java.util.Date;
 
-import Examination.Exam;
-import Examination.ExamRegistrar;
-import Examination.Paper;
-import Registration.Registrar;
-import universityexceptions.UniversityException;
+import com.examination.Exam;
+import com.examination.ExamRegistrar;
+import com.examination.Paper;
+import com.registration.Registrar;
+import com.universityexceptions.UniversityException;
 
 public class Student extends Thread implements Comparable<Student>, Serializable{
 
@@ -200,6 +200,7 @@ public class Student extends Thread implements Comparable<Student>, Serializable
 
 	public void display() {
 		System.out.println(getStudentName()+" has been registered "+getAdmissionId());
+		
 		// TODO Auto-generated method stub
 		
 	}
