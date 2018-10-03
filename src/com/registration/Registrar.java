@@ -4,13 +4,14 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.TreeSet;
 
 import com.Student;
 import com.universityexceptions.NoSeatException;
 import com.universityexceptions.RegistrationException;
 
-public class Registrar {
+public class Registrar  implements Serializable{
 	static short lastID = 1;
 
 	TreeSet<Student> students = new TreeSet<>();
@@ -24,17 +25,16 @@ public class Registrar {
 
 	private void serializeStudent(Student student) {
 		File f1 = new File("src/resource/" + student.getAdmissionId() + ".txt");
-		try {
-			if (f1.createNewFile()) {
-				FileOutputStream fos = new FileOutputStream(student.getAdmissionId() + ".txt");
+		try {f1.createNewFile();
+			
+				FileOutputStream fos = new FileOutputStream(f1);
 				ObjectOutputStream oos = new ObjectOutputStream(fos);
 				oos.writeObject(student);
 				System.out.println(" serialize");
-			} else
-				System.out.println("Unable to serialize");
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-
+System.out.println(e);
 			e.printStackTrace();
 		}
 	}

@@ -1,6 +1,8 @@
 package com.examination;
 
-public class Exam {
+import java.io.Serializable;
+
+public class Exam implements Serializable {
 
 	private Paper paper;
 

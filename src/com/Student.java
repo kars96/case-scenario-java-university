@@ -30,6 +30,27 @@ public class Student extends Thread implements Comparable<Student>, Serializable
 	
 	
 	
+	public Student( String studentName, MartialStatus martialStatus, int age, Gender sex, Date dob,
+			String address, String primaryEmail, String secondaryEmail, String phNumber, Subject subject,
+			String highEduQUa, String nationality) {
+		super();
+		
+		this.studentName = studentName;
+		this.martialStatus = martialStatus;
+		this.age = age;
+		this.sex = sex;
+		this.dob = dob;
+		this.address = address;
+		this.primaryEmail = primaryEmail;
+		this.secondaryEmail = secondaryEmail;
+		this.phNumber = phNumber;
+		this.subject = subject;
+		this.highEduQUa = highEduQUa;
+		this.nationality = nationality;
+		this.exam = exam;
+		this.result = result;
+		this.registrar = registrar;
+	}
 	@Override
 	public void run(){
 		try {
